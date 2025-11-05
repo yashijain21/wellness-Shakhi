@@ -4,10 +4,13 @@ import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa"
 import { motion } from "framer-motion";
 import amitabh from "../assets/amitabh.png";
 import bgImg from "../assets/background.png"
+import bgImg1 from "../assets/bgnew.png";
 import amitabh2 from "../assets/amitabh2.png";
 import newherobg from "../assets/newheromobile.png"
+import newherobg2 from "../assets/newheromobile2.png"
 import amitabhmobile from "../assets/mobileamitabh.png"
 import newhero from "../assets/newhero.png"
+import newhero2 from "../assets/newhero2.png"
 import bgImg2 from "../assets/am2bg.png"
 import logo from "../assets/logo.png"
 import bgLeaves from "../assets/bg-leaves.png"; // your background with leaves
@@ -40,7 +43,7 @@ export default function HeroSection() {
   <div
     className="absolute inset-0 bg-center bg-contain   bg-no-repeat"
     style={{
-       backgroundImage: `url(${newhero})`,
+       backgroundImage: `url(${newhero2})`,
       WebkitMaskImage:
         "radial-gradient(circle at center, black 70%, transparent 100%)",
       maskImage: "radial-gradient(circle at center, black 70%, transparent 100%)",
@@ -80,7 +83,7 @@ export default function HeroSection() {
   <div
     className="absolute inset-0 bg-end bg-contain bg-no-repeat "
     style={{
-       backgroundImage: `url(${newherobg})`,
+       backgroundImage: `url(${newherobg2})`,
       WebkitMaskImage:
         "radial-gradient(circle at center, black 70%, transparent 100%)",
       maskImage: "radial-gradient(circle at center, black 70%, transparent 100%)",
@@ -116,11 +119,12 @@ export default function HeroSection() {
 
       {/* Awareness Section */}
 <section
-  className="relative w-full h-[500px] flex items-center justify-center px-8 md:px-16 overflow-hidden  "
+  className="relative w-full h-[500px]  md:flex items-center justify-start px-8 md:px-16 overflow-hidden hidden  "
   style={{
-    backgroundImage: `url(${bgImg})`,
+    backgroundImage: `url(${bgImg1})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
     
   }}
 >
@@ -128,7 +132,8 @@ export default function HeroSection() {
   <div className="absolute inset-0 bg-black/30"></div>
 
   {/* Info Box */}
-  <div className="relative bg-[#00B5D8] text-white rounded-2xl p-8 md:p-10 max-w-sm shadow-lg hidden md:block">
+  <div classname="flex justify-start items-start bg-red-400">
+      <div className="relative bg-[#00B5D8] text-white rounded-2xl p-8 md:p-10 max-w-sm shadow-lg hidden md:block">
     <h2 className="text-2xl font-semibold mb-4 leading-snug">
       Understanding the correlation between blood
       groups & pregnancy
@@ -143,8 +148,18 @@ export default function HeroSection() {
     </button>
    </a>
   </div>
+  </div>
 </section>
-  <div className="relative bg-[#00B5D8] text-white  p-8 md:p-10  shadow-lg block  md:hidden ">
+ <section
+  className="relative w-full h-[600px] flex items-end justify-center px-8 md:hidden overflow-hidden"
+  style={{
+    backgroundImage: `url(${bgImg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+   <div className="relative bg-[#00B5D8] text-white  p-8 mb-3 md:p-10  shadow-lg block  md:hidden ">
     <h2 className="text-sm font-semibold mb-4 leading-snug">
       Understanding the correlation between blood
       groups & pregnancy
@@ -161,6 +176,7 @@ export default function HeroSection() {
    </a>
    </div>
   </div>
+</section>
  <section
       className="relative w-full h-[500px] flex items-center justify-center px-8 md:px-16 overflow-hidden"
       style={{
