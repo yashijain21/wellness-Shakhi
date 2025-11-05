@@ -43,7 +43,7 @@ export default function HeroSection() {
   <div
     className="absolute inset-0 bg-center bg-contain   bg-no-repeat"
     style={{
-       backgroundImage: `url(${newhero2})`,
+       backgroundImage: `url(${newhero})`,
       WebkitMaskImage:
         "radial-gradient(circle at center, black 70%, transparent 100%)",
       maskImage: "radial-gradient(circle at center, black 70%, transparent 100%)",
@@ -83,7 +83,7 @@ export default function HeroSection() {
   <div
     className="absolute inset-0 bg-end bg-contain bg-no-repeat "
     style={{
-       backgroundImage: `url(${newherobg2})`,
+       backgroundImage: `url(${newherobg})`,
       WebkitMaskImage:
         "radial-gradient(circle at center, black 70%, transparent 100%)",
       maskImage: "radial-gradient(circle at center, black 70%, transparent 100%)",
