@@ -119,25 +119,28 @@ export default function RhCompatibilityModal({ className = "" }) {
                 )}
 
                 {result === "na" && (
-                  <>
-                    <div className="text-5xl mb-4 text-yellow-600">ℹ️</div>
-                    <p className="font-medium text-gray-800">
-                      Sorry, we can’t assess your Rh Compatibility.
-                    </p>
-                    <p className="text-sm mt-2">
-                      Knowing your and your partner’s blood group is the first
-                      step towards a healthy pregnancy.
-                      <br />
-                      Get your blood group tested today.
-                    </p>
-                    <a
-                      href={guidePDF}
-                      download="Rh-Guide.pdf"
-                      className="inline-block mt-6 px-6 py-2 bg-white text-cyan-700 font-semibold rounded-lg hover:bg-cyan-100 transition"
-                    >
-                      Download Rh Guide
-                    </a>
-                  </>
+                 <>
+  <div className="text-5xl mb-4 text-yellow-600">ℹ️</div>
+
+  <p className="font-medium text-gray-800">
+    Sorry, we can’t assess your Rh Compatibility.
+  </p>
+
+  <p className="text-sm mt-2">
+    Knowing your and your partner’s blood group is the <br></br> first step towards a healthy pregnancy.
+    <br />
+    Get your blood group tested today.
+  </p>
+
+  <a
+    href={guidePDF}
+    download="Rh-Guide.pdf"
+    className="inline-block mt-6 px-6 py-2 bg-white text-cyan-700 font-semibold rounded-lg hover:bg-cyan-100 transition"
+  >
+    Download Rh Guide
+  </a>
+</>
+
                 )}
 
                 <button
