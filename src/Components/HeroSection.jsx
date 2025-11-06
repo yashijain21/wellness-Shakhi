@@ -677,7 +677,7 @@ export default function HeroSection() {
                   <h3 className="text-[#009FB6] font-semibold">
                     Follow Us on Instagram
                   </h3>
-                  <p className="text-[#009FB6] font-medium">@Wellnesssakhi</p>
+                  <p className="text-[#009FB6] font-medium">@Wellnes_sakhi</p>
                   <p className="text-gray-600 text-sm mt-2">
                     Stay updated with health tips, expert advice, and Rh factor awareness.
                   </p>
