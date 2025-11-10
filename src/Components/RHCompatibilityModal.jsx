@@ -97,39 +97,44 @@ export default function RhCompatibilityModal({ className = "" }) {
                   </>
                 )}
 
-                {result === "risk" && (
-                  <>
-                    <div className="text-5xl mb-4 text-red-600">⚠️</div>
-                    <p className="font-medium text-red-800">
-                      Your test results show <b>Rh incompatibility</b>.
-                    </p>
-                    <p className="text-sm mt-2">
-                      Mother is Rh-negative and Father is Rh-positive.
-                      This can cause complications in pregnancy or transfusion,
-                      but it’s manageable with medical care.
-                    </p>
-                    <a
-                      href={guidePDF}
-                      download="AntiD-Patient-Guide.pdf"
-                      className="inline-block mt-6 px-6 py-2 bg-white text-cyan-700 font-semibold rounded-lg hover:bg-cyan-100 transition"
-                    >
-                      Download Guide
-                    </a>
-                  </>
-                )}
+              {result === "risk" && (
+  <>
+    <div className="text-5xl mb-4 text-red-600">⚠️</div>
+    <p className="font-medium text-red-800">
+      Your test results show <b>possible Rh incompatibility</b>.
+    </p>
+    <p className="text-sm mt-2 leading-relaxed text-gray-800">
+      The mother is Rh-negative and the father is Rh-positive. This <b>may cause complications </b> 
+      during pregnancy if the baby is Rh-positive. Don’t worry! it is manageable with timely medical care.
+      <br />
+      <br />
+      Please connect with your doctor for better understanding and evaluation, 
+      and refer to the guide below for more information.
+    </p>
+
+    {/* <a
+      href={guidePDF}
+      download="AntiD-Patient-Guide.pdf"
+      className="inline-block mt-6 px-6 py-2 bg-white text-cyan-700 font-semibold rounded-lg hover:bg-cyan-100 transition"
+    >
+      Download Guide
+    </a>/ */}
+  </>
+)}
+
 
                 {result === "na" && (
                  <>
-  <div className="text-5xl mb-4 text-yellow-600">ℹ️</div>
+  <div className="text-5xl mb-4 text-center text-yellow-600">ℹ️</div>
 
   <p className="font-medium text-gray-800">
     Sorry, we can’t assess your Rh Compatibility.
   </p>
 
-  <p className="text-sm mt-2">
-    Knowing your and your partner’s blood group is the <br></br> first step towards a healthy pregnancy.
+  <p className="text-sm mt-2 leading-relaxed">
+    Knowing your and your partner’s blood <br/>group is the first step towards a <br/> healthy pregnancy.
     <br />
-    Get your blood group tested today.
+   <span className="font-semibold"> Get your blood group tested today.</span>
   </p>
 
   <a

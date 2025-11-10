@@ -1,4 +1,4 @@
-// HeroSection.jsx
+// Risk.jsx
 import React from "react";
 import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa"
 import { motion } from "framer-motion";
@@ -23,8 +23,8 @@ import insta2 from "../assets/insta2.png";
 import insta3 from "../assets/insta3.png"; // add your 3rd card
 import mobilebanner from "../assets/mobile banner.jpg"
 import { useState } from "react";
-import RhCompatibilityModal from "./RHCompatibilityModal";
-export default function HeroSection() {
+import RhCompatibilityModal from "../Components/RHCompatibilityModal.jsx";
+export default function Risk() {
       const [open, setOpen] = useState(null);
   return (
     <div className="noto-sans bg-white text-gray-800 ">
@@ -43,7 +43,7 @@ export default function HeroSection() {
   <div
     className="absolute inset-0 bg-center bg-contain   bg-no-repeat"
     style={{
-       backgroundImage: `url(${newhero})`,
+       backgroundImage: `url(${newhero2})`,
       WebkitMaskImage:
         "radial-gradient(circle at center, black 70%, transparent 100%)",
       maskImage: "radial-gradient(circle at center, black 70%, transparent 100%)",
@@ -83,7 +83,7 @@ export default function HeroSection() {
   <div
     className="absolute inset-0 bg-end bg-contain bg-no-repeat "
     style={{
-       backgroundImage: `url(${newherobg})`,
+       backgroundImage: `url(${newherobg2})`,
       WebkitMaskImage:
         "radial-gradient(circle at center, black 70%, transparent 100%)",
       maskImage: "radial-gradient(circle at center, black 70%, transparent 100%)",
@@ -323,8 +323,7 @@ export default function HeroSection() {
 
           <p className="text-gray-700 mb-8  text-sm text-center">
             Answers to Your Most Common Questions About Blood Types, Pregnancy,
-            and Newborn Health . <br/>
-            Please connect with your doctor to better understand your Rh status and possible risks. Your doctor can guide you on the right tests, precautions, and care to ensure a safe pregnancy.
+            and Newborn Health
           </p>
           </div>
            </div>
@@ -374,14 +373,13 @@ export default function HeroSection() {
                 {open === 2 ? "−" : "+"}
               </span>
             </div>
-           {open === 2 && (
-  <p className="px-5 pb-3 text-gray-700 text-sm">
-    In India, about 5–7% of people are Rh-negative, while globally it's around 7% 
+            {open === 2 && (
+              <p className="px-5 pb-3 text-gray-700 text-sm">
+                In India, about 5–7% of people are Rh-negative, while globally it's around 7% 
     (and up to 15% in Europe and the U.S.). Rh incompatibility can therefore occur 
-    in a smaller but significant number of pregnancies.
-  </p>
-)}
-
+    in a smaller but significant number of pregnancies
+              </p>
+            )}
           </div>
 
           {/* FAQ 3 */}
@@ -399,11 +397,12 @@ export default function HeroSection() {
             </div>
             {open === 3 && (
               <p className="px-5 pb-3 text-gray-700 text-sm">
-                Rh incompatibility usually becomes a concern when the mother is exposed to
-      Rh-positive blood such as during delivery, miscarriage, abortion, ectopic
+                 Rh incompatibility usually becomes a concern when the mother is exposed to
+      Rh-positive blood — such as during delivery, miscarriage, abortion, ectopic
       pregnancy, or certain prenatal procedures. However, sometimes a small,
       unnoticed fetomaternal haemorrhage (silent transfer of baby’s blood into the
-      mother’s circulation) can also trigger antibody formation. 
+      mother’s circulation) can also trigger antibody formation. This is why an
+      Anti-D injection is routinely given at around 28 weeks of pregnancy to prevent
        
               </p>
             )}
@@ -479,7 +478,6 @@ export default function HeroSection() {
               </p>
             )}
           </div>
-
         </div>
 
        
@@ -497,9 +495,8 @@ export default function HeroSection() {
           </h2>
 
           <p className="text-gray-700 mb-8 leading-relaxed">
-             Answers to Your Most Common Questions About Blood Types, Pregnancy,
-            and Newborn Health . <br/>
-            Please connect with your doctor to better understand your Rh status and possible risks. Your doctor can guide you on the right tests, precautions, and care to ensure a safe pregnancy.
+            Answers to Your Most Common Questions About Blood Types, Pregnancy,
+            and Newborn Health
           </p>
 
           {/* FAQ 1 */}
@@ -538,14 +535,13 @@ export default function HeroSection() {
                 {open === 2 ? "−" : "+"}
               </span>
             </div>
-           {open === 2 && (
-  <p className="px-5 pb-3 text-gray-700 text-sm">
-    In India, about 5–7% of people are Rh-negative, while globally it's around 7% .
-    Rh incompatibility can therefore occur 
-    in a smaller but significant number of pregnancies.
-  </p>
-)}
-
+            {open === 2 && (
+              <p className="px-5 pb-3 text-gray-700 text-sm">
+                In India, about 5–7% of people are Rh-negative, while globally it's around 7% . 
+                Rh incompatibility can therefore occur 
+                in a smaller but significant number of pregnancies
+              </p>
+            )}
           </div>
 
           {/* FAQ 3 */}
@@ -564,10 +560,11 @@ export default function HeroSection() {
             {open === 3 && (
               <p className="px-5 pb-3 text-gray-700 text-sm">
                Rh incompatibility usually becomes a concern when the mother is exposed to
-      Rh-positive blood such as during delivery, miscarriage, abortion, ectopic
+      Rh-positive blood — such as during delivery, miscarriage, abortion, ectopic
       pregnancy, or certain prenatal procedures. However, sometimes a small,
       unnoticed fetomaternal haemorrhage (silent transfer of baby’s blood into the
-      mother’s circulation) can also trigger antibody formation. 
+      mother’s circulation) can also trigger antibody formation. This is why an
+      Anti-D injection is routinely given at around 28 weeks of pregnancy to prevent
        
               </p>
             )}
@@ -670,64 +667,54 @@ export default function HeroSection() {
         </p>
       </div>
 
-{/* Horizontal Scroll Carousel */}
-<div className="flex items-center justify-start md:justify-center space-x-4 sm:space-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-3 sm:px-8 md:px-16">
-  {[
-    {
-      img: insta1,
-      link: "https://www.instagram.com/p/DHaUELkpdxz/?utm_source=ig_web_copy_link&igsh=MW4zYjZvZTk4dGl0YQ==",
-      title: "Follow Us on Instagram",
-      handle: "@wellness_sakhi",
-      desc: "Stay updated with health tips, expert advice, and Rh factor awareness.",
-    },
-    {
-      img: insta2,
-      link: "https://www.instagram.com/p/DHaUHUDJ7hB/?utm_source=ig_web_copy_link&igsh=anI2emhnMHEwZGZo",
-      title: "Blood Group Awareness Week #BanoBloodSmart",
-      desc: "Driving conversations around critical health challenges.",
-    },
-    {
-      img: insta3,
-      link: "https://www.instagram.com/reel/DQoqyIzCRxq/?utm_source=ig_web_copy_link&igsh=bGlhY3JzczhjNjlu",
-      title: "Wellness Sakhi Teams Up with UNIMO",
-      desc: "Inspiring change through our social platforms.",
-    },
-  ].map((item, index) => (
-    <div
-      key={index}
-      className="flex-shrink-0 snap-center w-[230px] sm:w-[260px] md:w-[300px] lg:w-[320px] overflow-hidden"
-    >
-      <a
-        href={item.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block transition-transform hover:scale-105 duration-300"
-      >
-        <img
-          src={item.img}
-          alt={`Instagram Post ${index + 1}`}
-          className="w-full h-[260px] sm:h-[300px] md:h-[320px] object-cover rounded-lg shadow-md"
-        />
-      </a>
-
-      <div className="p-3 sm:p-4 text-center">
-        <h3 className="text-[#009FB6] font-semibold text-sm sm:text-base md:text-lg leading-tight">
-          {item.title}
-        </h3>
-        {item.handle && (
-          <p className="text-[#009FB6] font-medium text-xs sm:text-sm">
-            {item.handle}
-          </p>
-        )}
-        <p className="text-gray-600 text-xs sm:text-sm mt-1 sm:mt-2 leading-snug">
-          {item.desc}
-        </p>
+      {/* Horizontal Scroll Carousel */}
+      <div className="flex items-center justify-center space-x-10 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 px-20">
+        {[insta1, insta2, insta3].map((img, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 snap-center    w-[280px] md:w-[320px] overflow-hidden"
+          >
+            <img
+              src={img}
+              alt={`Awareness ${index + 1}`}
+              className="w-full h-[320px] object-cover"
+            />
+            <div className="p-4 text-center">
+              {index === 0 && (
+                <>
+                  <h3 className="text-[#009FB6] font-semibold">
+                    Follow Us on Instagram
+                  </h3>
+                  <p className="text-[#009FB6] font-medium">@wellness_sakhi</p>
+                  <p className="text-gray-600 text-sm mt-2">
+                    Stay updated with health tips, expert advice, and Rh factor awareness.
+                  </p>
+                </>
+              )}
+              {index === 1 && (
+                <>
+                  <h3 className="text-[#009FB6] font-semibold">
+                    Blood Group Awareness Week #BanoBloodSmart
+                  </h3>
+                  <p className="text-gray-600 text-sm mt-2">
+                    Driving conversations around critical health challenges.
+                  </p>
+                </>
+              )}
+              {index === 2 && (
+                <>
+                  <h3 className="text-[#009FB6] font-semibold">
+                    Wellness Sakhi Teams Up with UNIMO
+                  </h3>
+                  <p className="text-gray-600 text-sm mt-2">
+                    Inspiring change through our social platforms.
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
-
-
     </section>
      <footer className="bg-[#d8edf0] text-gray-700 pt-10 pb-6">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-start">
